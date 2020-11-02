@@ -25,7 +25,8 @@ import {bookVisit} from '../apis';
 
 class Landing extends React.Component {
   state = {
-    loading: false
+    loading: false,
+    date: moment().add(1, 'day')
   };
   componentDidMount() {
   }

@@ -67,11 +67,19 @@ class Landing extends React.Component {
       });
     })
     .catch(err => {
-      this.setState({
-        result: 'danger',
-        loading: false,
-        feedback: 'Some error occured, please refresh the page and try again.'
-      });
+      if(err.response.status === 400) {
+        this.setState({
+          result: 'danger',
+          loading: false,
+          feedback: err.response.data
+        });
+      } else {
+        this.setState({
+          result: 'danger',
+          loading: false,
+          feedback: 'Some error occured, please refresh the page and try again.'
+        });
+      }
     });
   }
   submitConfirm = (e) => {
@@ -90,11 +98,20 @@ class Landing extends React.Component {
       });
     })
     .catch(err => {
-      this.setState({
-        result: 'danger',
-        loading: false,
-        feedback: 'Some error occured, please refresh the page and try again.'
-      });
+      console.log(err.status);
+      if(err.status === 400) {
+        this.setState({
+          result: 'danger',
+          loading: false,
+          feedback: err.response.data
+        });
+      } else {
+        this.setState({
+          result: 'danger',
+          loading: false,
+          feedback: 'Some error occured, please refresh the page and try again.'
+        });
+      }
     });
   }
   render() {
