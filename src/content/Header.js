@@ -93,7 +93,7 @@ class DemoNavbar extends React.Component {
                             fontFamily: 'FontAwesome',
                             display: 'flex',
                             alignItems: 'center',
-                            fontWeight: 'bold',
+                            fontSize: 18,
                             color: 'var(--primary)'
                           }}
                           className="mb-0"

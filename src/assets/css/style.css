@@ -59,10 +59,10 @@ body {
   bottom: 0px;
 }
 .react-multiple-carousel__arrow--left {
-  left: 40% !important;
+  left: 30% !important;
 }
 .react-multiple-carousel__arrow--right {
-  right: 40% !important;
+  right: 30% !important;
 }
 
 #contact-menu .icon {
@@ -78,6 +78,16 @@ body {
 }
 .hero-row {
   height: 100vh;
+}
+
+.hero-row#banner-1{
+  background-image: url('../img/banners/img1.jpg');
+}
+
+@media (max-width: 600px) {
+  .hero-row#banner-1{
+    background-image: url('../img/banners/img1-small.jpg');
+  }
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
@@ -267,4 +277,29 @@ p {
   #how-it-works .hiw-ill {
     display: none;
   }
+}
+
+/* button.loading::before {
+  content: '';
+  height: 20px;
+  width: 20px;
+} */
+button.loading {
+  background: grey !important;
+}
+
+.hero-action-buttons {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+.hero-action-buttons .col {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-action-buttons .col .btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

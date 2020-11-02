@@ -8,15 +8,23 @@ import "./assets/scss/argon-design-system-react.scss?v1.1.0";
 import "./assets/css/style.css";
 
 import Index from "./content/Index";
-import FAQC from "./content/FAQContainer";
+import FAQ from "./content/FAQ";
+import BookFreeSample from "./content/BookFreeSample";
+import NavBar from "./content/Header";
+import Footer from "./content/Footer";
+import ContactMenu from "./content/ContactMenu";
 
 ReactDOM.render(
   <HashRouter base="honest-milk">
+    <NavBar />
+    <ContactMenu />
     <Switch>
-      <Route path="/" exact render={props => <Index {...props} />} />
-      <Route path="/faq" exact render={props => <FAQC {...props}/>} />
+      <Route path="/book-sample" exact render={props => <BookFreeSample {...props}/>} />
+      <Route path="/faq" exact render={props => <FAQ {...props}/>} />
+      <Route path="/" render={props => <Index {...props} />} />
       <Redirect to="/" />
     </Switch>
+    <Footer />
   </HashRouter>,
   // <div>
   //   Hey

@@ -18,7 +18,7 @@ function ContactMenu() {
         
         <a href={`#faq`}>
           <div className="icon icon-lg icon-shape rounded-circle bg-primary mb-1">
-            <i className="fa fa-question text-white" />
+            <div style={{color: 'white'}}>FAQ</div>
           </div>
         </a>
         <a href={`mailto:${constants.email}`} target="_blank" rel="noopener noreferrer">

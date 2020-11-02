@@ -7,8 +7,8 @@ import {
   Col
 } from "reactstrap";
 
-const maxPossible = 700;
-const todaysPurityValue = 540;
+const maxPossible = 100;
+const todaysPurityValue = 83;
 const percentage = todaysPurityValue / maxPossible;
 
 class PurityMeter extends Component {

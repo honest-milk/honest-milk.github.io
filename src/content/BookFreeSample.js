@@ -4,7 +4,7 @@ import React from "react";
 import classnames from "classnames";
 import moment from 'moment';
 import ReactDatetime from "react-datetime";
-// import farmSVG from "../assets/img/ill/farm.svg";
+import farmSVG from "../assets/img/ill/farm.jpg";
 
 // reactstrap components
 import {
@@ -20,12 +20,13 @@ import {
   Alert, Form
 } from "reactstrap";
 
-import farmSVG from '../assets/img/ill/farm.jpg';
-import {bookVisit} from '../apis';
+import {bookSampleConfirm, bookSampleInit} from '../apis';
 
 class Landing extends React.Component {
   state = {
-    loading: false
+    stage: 1,
+    loading: false,
+    date: moment().add(1, 'days')
   };
   componentDidMount() {
   }
@@ -43,29 +44,61 @@ class Landing extends React.Component {
     let yesterday = moment().subtract(1, 'day');
     return current.isAfter(yesterday);
   };
-  submit = (e) => {
+  submitInit = (e) => {
     e.preventDefault();
     this.setState({
       loading: true
     });
-    bookVisit(this.state)
+    let {name, phone, flat, region} = this.state;
+    let sample = {
+      name, phone, 
+      address: {
+        flat,
+        region
+      }
+    }
+    bookSampleInit(sample)
     .then(res => {
       this.setState({
         result: 'success',
-        feedback: 'We have booked a slot for you. See you there!',
-        loading: false
+        feedback: res.data,
+        loading: false,
+        stage: 2
       });
     })
     .catch(err => {
       this.setState({
         result: 'danger',
         loading: false,
-        feedback: 'Some error occured, please refresh the page and try again.'
+        feedback: err.response ? err.response.data : 'Some error occured, please refresh the page and try again.'
+      });
+    });
+  }
+  submitConfirm = (e) => {
+    e.preventDefault();
+    this.setState({
+      loading: true
+    });
+    let {otp, phone, date} = this.state;
+    bookSampleConfirm({otp, phone, date})
+    .then(res => {
+      this.setState({
+        result: 'success',
+        feedback: res.data,
+        loading: false,
+        stage: 3
+      });
+    })
+    .catch(err => {
+      this.setState({
+        result: 'danger',
+        loading: false,
+        feedback: err.response ? err.response.data : 'Some error occured, please refresh the page and try again.'
       });
     });
   }
   render() {
-    let {loading, result, feedback} = this.state;
+    let {stage, loading, result, feedback, date} = this.state;
     return (
       <>
         <section 
@@ -73,6 +106,7 @@ class Landing extends React.Component {
           id="book-visit"
           style={{
             backgroundImage: `url(${farmSVG})`,
+            // backgroundColor: 'var(--primary)',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center center',
             backgroundAttachment: 'fixed',
@@ -86,7 +120,10 @@ class Landing extends React.Component {
                     {/* <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={farmSVG}
+                      src={Logo}
+                      style={{
+                        height: '220px'
+                      }}
                     /> */}
                   </div>
                 </Col>
@@ -94,26 +131,20 @@ class Landing extends React.Component {
                   <div className="d-flex px-3">
                     <div>
                       <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                        <i className="ni ni-building text-warning" />
+                        <i className="fa fa-money text-warning" />
                       </div>
                     </div>
                     <div className="pl-4">
-                      <h4 className="display-3 text-white text-bold text-shadow">Book A Farm Visit</h4>
-                      <p className="text-white text-bold text-shadow">
-                        Visit our farm where you can get a closer look at our testing laboratory. <br />
-                        See how we deliver quality we promise.
-                        We are located at <br/>
-                          Organic Dairy Farm <br/>
-                          Village Dhanouni,  <br/>
-                          Tehsil Dera Bassi, <br/>
-                          District Mohali <br/>
+                      <h4 className="display-3 text-white text-shadow text-bold">Book A Free Sample</h4>
+                      <p className="text-white text-shadow text-bold">
+                        Book your one free sample and test our milk before buying a subscription.
                       </p>
                     </div>
                   </div>
                   <div>
-                    <Form
-                      onSubmit={this.submit}
-                    >
+                  {stage === 1 && <Form
+                    onSubmit={this.submitInit}
+                  >
                   <FormGroup
                     className={classnames("mt-5", {
                       focused: this.state.nameFocused
@@ -136,6 +167,7 @@ class Landing extends React.Component {
                       />
                     </InputGroup>
                   </FormGroup>
+                  
                   <FormGroup
                     className={classnames({
                       focused: this.state.emailFocused
@@ -159,6 +191,42 @@ class Landing extends React.Component {
                     </InputGroup>
                   </FormGroup>
                   <FormGroup>
+                    <InputGroup className="input-group-alternative">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="fa fa-home" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="Flat/House No."
+                        type="text"
+                        name="flat"
+                        required
+                        onChange={this.onChange}
+                        onFocus={e => this.setState({ nameFocused: true })}
+                        onBlur={e => this.setState({ nameFocused: false })}
+                      />
+                    </InputGroup>
+                  </FormGroup>
+                  <FormGroup>
+                    <InputGroup className="input-group-alternative">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="fa fa-home" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="Region"
+                        type="text"
+                        name="region"
+                        required
+                        onChange={this.onChange}
+                        onFocus={e => this.setState({ nameFocused: true })}
+                        onBlur={e => this.setState({ nameFocused: false })}
+                      />
+                    </InputGroup>
+                  </FormGroup>
+                  <FormGroup>
                     <InputGroup>
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
@@ -169,9 +237,9 @@ class Landing extends React.Component {
                         inputProps={{
                           placeholder: "Pick a date"
                         }}
-                        defaultValue={moment().add(1, 'day')}
-                        format={'YYYY-MM-DD'}
+                        value={date}
                         isValidDate={this.disablePastDt}
+                        dateFormat="YYYY-MM-DD"
                         timeFormat={false}
                         required
                         name="date"
@@ -193,11 +261,63 @@ class Landing extends React.Component {
                       size="lg"
                       type="submit"
                     >
+                      Send OTP
+                    </Button>
+                  </div>
+                  
+                  </Form>}
+
+                  {stage === 2 && <Form
+                    onSubmit={this.submitConfirm}
+                  >
+                  <FormGroup
+                    className={classnames({
+                      focused: this.state.emailFocused
+                    })}
+                  >
+                    <InputGroup className="input-group-alternative">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="fa fa-lock" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="OTP"
+                        type="number"
+                        name="otp"
+                        required
+                        onFocus={e => this.setState({ emailFocused: true })}
+                        onBlur={e => this.setState({ emailFocused: false })}
+                        onChange={this.onChange}
+                      />
+                    </InputGroup>
+                  </FormGroup>
+                  {result && <div>
+                    <Alert color={result} >
+                      {feedback}
+                    </Alert>
+                  </div>}
+                  <div>
+                    <Button
+                      block
+                      className={`btn-round ${loading ? 'loading': ''}`}
+                      disabled={loading}
+                      color="default"
+                      size="lg"
+                      type="submit"
+                    >
                       Book Visit
                     </Button>
                   </div>
                   
-                  </Form>
+                  </Form>}
+
+                  {
+                    stage === 3 &&
+                    <div>
+                      <h3>We have received your request.</h3>
+                    </div>
+                  }
                   </div>
                 </Col>
               </Row>

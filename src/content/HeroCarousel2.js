@@ -7,9 +7,6 @@ import {
   Row, Col, Button
 } from 'reactstrap';
 
-import Logo from "../assets/img/brand/Logo.png";
-import Banner1 from "../assets/img/banners/img1.jpg";
-
 const items = [
   {
     id: 1,
@@ -17,9 +14,8 @@ const items = [
     render: (
       <section 
         className="section pb-0 pb-6 hero-row" 
-        id="book-visit"
+        id="banner-1"
         style={{
-          backgroundImage: `url(${Banner1})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
           backgroundAttachment: 'fixed',
@@ -28,21 +24,32 @@ const items = [
         }}
       >
         <div 
-          style={{
-            position: 'absolute',
-            bottom: 100,
-            right: '30%',
-          }}
+          className="hero-action-buttons"
         >
-          <Button
-            className="btn-lg btn-icon ml-2"
-            color="primary"
-            href="#test-milk"
-          >
-          <span className="nav-link-inner--text ml-1">
-            Test Your Milk
-          </span>
-          </Button>
+          <Row>
+            <Col>
+            <Button
+              className="btn-lg btn-icon ml-2"
+              color="primary"
+              href="#test-milk"
+            >
+              <span className="nav-link-inner--text ml-1">
+                Test Your Milk
+              </span>
+            </Button>
+            </Col>
+            <Col>
+              <Button
+                className="btn-lg btn-icon ml-2"
+                color="primary"
+                href="#book-sample"
+              >
+                <span className="nav-link-inner--text ml-1">
+                  Book Free Sample
+                </span>
+              </Button>
+            </Col>
+          </Row>
         </div>
       </section>
     ),
@@ -52,50 +59,48 @@ const items = [
   {
     id: 2,
     altText: '',
-    render: (<div>
-      <Row 
-        className="hero-row"
+    render: (
+      <section 
+        className="section pb-0 pb-6 hero-row" 
+        id="banner-1"
         style={{
-          position: 'relative'
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          position:'relative'
         }}
       >
         <div 
-          style={{
-            position: 'absolute',
-            bottom: 100,
-            right: '30%',
-            zIndex: 10
-          }}
+          className="hero-action-buttons"
         >
-          <Button
-            className="btn-lg btn-icon ml-2"
-            color="primary"
-            href="#book-sample"
-          >
-          <span className="nav-link-inner--text ml-1">
-            Book a Free Sample
-          </span>
-          </Button>
+          <Row>
+            <Col>
+            <Button
+              className="btn-lg btn-icon ml-2"
+              color="primary"
+              href="#test-milk"
+            >
+              <span className="nav-link-inner--text ml-1">
+                Test Your Milk
+              </span>
+            </Button>
+            </Col>
+            <Col>
+            <Button
+              className="btn-lg btn-icon ml-2"
+              color="primary"
+              href="#book-sample"
+            >
+              <span className="nav-link-inner--text ml-1">
+                Book Free Sample
+              </span>
+            </Button>
+            </Col>
+          </Row>
         </div>
-        <Col lg="4" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <div
-            className="card-profile-image text-center"
-          >
-            <img
-              alt="..."
-              className="rounded-circle"
-              src={Logo}
-              style={{
-                height: 200
-              }}
-            />
-          </div>
-        </Col>
-        <Col lg="8" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-          <h1 className="header-heading" style={{color: "var(--default)"}}>Get Bottled Milk <br/>Delivered at <br/>Your Doorstep</h1>
-        </Col>
-      </Row>
-    </div>),
+      </section>
+    ),
     caption: '',
     src: 'https://github.com/chuanshuoge1/reactstrap/blob/gh-pages/image/2.png?raw=true'
   },
@@ -103,27 +108,49 @@ const items = [
     id: 3,
     altText: '',
     caption: '',
-    render: (<div>
-      <Row className="hero-row">
-        <Col lg="4" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <div
-            className="card-profile-image text-center"
-          >
-            <img
-              alt="..."
-              className="rounded-circle"
-              src={Logo}
-              style={{
-                height: 200
-              }}
-            />
-          </div>
-        </Col>
-        <Col lg="8" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <h1 className="header-heading" style={{color: "var(--primary)"}}>Bonus Cashbacks</h1>
-        </Col>
-      </Row>
-    </div>),
+    render: (
+      
+      <section 
+        className="section pb-0 pb-6 hero-row" 
+        id="banner-1"
+        style={{
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          position:'relative'
+        }}
+      >
+        <div 
+          className="hero-action-buttons"
+        >
+          <Row>
+            <Col>
+            <Button
+              className="btn-lg btn-icon ml-2"
+              color="primary"
+              href="#test-milk"
+            >
+              <span className="nav-link-inner--text ml-1">
+                Test Your Milk
+              </span>
+            </Button>
+            </Col>
+            <Col>
+            <Button
+              className="btn-lg btn-icon ml-2"
+              color="primary"
+              href="#book-sample"
+            >
+              <span className="nav-link-inner--text ml-1">
+                Book Free Sample
+              </span>
+            </Button>
+            </Col>
+          </Row>
+        </div>
+      </section>
+    ),
     src: 'https://github.com/chuanshuoge1/reactstrap/blob/gh-pages/image/3.png?raw=true'
   }
 ];

@@ -1,36 +1,52 @@
-const url = 'http://localhost:5000/api/misc';
+import axios from "axios";
+// const URL = 'http://localhost:5000/api/misc';
+const URL = 'https://honestmilk-api.herokuapp.com/misc';
 
 
-async function api(url, options) {
-  try {
-    let response = await fetch(url, options)
-    .catch(err => {
-      return new Promise((resolve, reject) => reject(err));
-    });
-    if(response.ok) {
-      return response;
-    } else {
-      return new Promise((resolve, reject) => reject(response));
-    }
-  } catch (err) {
-    return new Promise((resolve, reject) => reject(err));
-  }
+async function api(config) {
+  return axios.request(config)
 }
 
-async function addQuery(query) {
-  let response = await api(`${url}/addQuery`, {
+export async function addQuery(query) {
+  return api({
+    url: `${URL}/addQuery`,
     method: 'POST',
+    data: {query},
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({query})
-  })
-  .then(data => data.json())
-  .catch(err => err);
-
-  return response;
+  });
 }
-const apis = {
-  addQuery
-};
-export default apis;
+
+export async function bookSampleInit(sample) {
+  return api({
+    url: `${URL}/bookSample/init`,
+    method: 'POST',
+    data: {sample},
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  });
+}
+
+export async function bookSampleConfirm(data) {
+  return api({
+    url: `${URL}/bookSample/confirm`,
+    method: 'POST',
+    data: data,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  });
+}
+
+export async function bookVisit(visit) {
+  return api({
+    url: `${URL}/bookVisit`,
+    method: 'POST',
+    data: {visit},
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  });
+}

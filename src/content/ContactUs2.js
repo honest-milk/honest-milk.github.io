@@ -13,17 +13,19 @@ import {
   InputGroupAddon,
   InputGroupText,
   InputGroup,
-  Button
+  Button,
+  Alert, Form
 } from "reactstrap";
 
-import apis from '../apis';
+import {addQuery} from '../apis';
 
 // import Datepicker from "./IndexSections/Datepicker.js";
 
 class Landing extends React.Component {
-  state = {};
+  state = {
+    loading: false
+  };
   componentDidMount() {
-    
   }
   onChange = (e) => {
     this.setState({
@@ -31,16 +33,32 @@ class Landing extends React.Component {
     });
   }
   submit = (e) => {
-    console.log( this.state)
-    apis.addQuery(this.state)
+    e.preventDefault();
+    this.setState({
+      loading: true
+    });
+    addQuery(this.state)
     .then(res => {
-      console.log(res);
+      this.setState({
+        result: 'success',
+        feedback: 'Message has been delivered.',
+        loading: false,
+        name: null,
+        phone: null,
+        message: null
+      });
     })
     .catch(err => {
-      console.log(err);
+      
+      this.setState({
+        result: 'danger',
+        loading: false,
+        feedback: 'Some error occured, please refresh the page and try again.'
+      });
     });
   }
   render() {
+    let {name, phone, message, loading, result, feedback} = this.state;
     return (
       <>
         <section className="section pb-0 bg-gradient-primary pb-6" id="contact-us">
@@ -71,27 +89,32 @@ class Landing extends React.Component {
                     </div>
                   </div>
                   <div>
+                  <Form
+                    onSubmit={this.submit}
+                  >
                   <FormGroup
-                        className={classnames("mt-5", {
-                          focused: this.state.nameFocused
-                        })}
-                      >
-                        <InputGroup className="input-group-alternative">
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="ni ni-circle-08" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Your name"
-                            type="text"
-                            name="name"
-                            onChange={this.onChange}
-                            onFocus={e => this.setState({ nameFocused: true })}
-                            onBlur={e => this.setState({ nameFocused: false })}
-                          />
-                        </InputGroup>
-                      </FormGroup>
+                    className={classnames("mt-5", {
+                      focused: this.state.nameFocused
+                    })}
+                  >
+                    <InputGroup className="input-group-alternative">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="ni ni-circle-08" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="Your name"
+                        type="text"
+                        name="name"
+                        required
+                        value={name}
+                        onChange={this.onChange}
+                        onFocus={e => this.setState({ nameFocused: true })}
+                        onBlur={e => this.setState({ nameFocused: false })}
+                      />
+                    </InputGroup>
+                  </FormGroup>
                   <FormGroup
                     className={classnames({
                       focused: this.state.emailFocused
@@ -107,6 +130,8 @@ class Landing extends React.Component {
                         placeholder="Phone Number"
                         type="number"
                         name="phone"
+                        value={phone}
+                        required
                         onFocus={e => this.setState({ emailFocused: true })}
                         onBlur={e => this.setState({ emailFocused: false })}
                         onChange={this.onChange}
@@ -121,21 +146,29 @@ class Landing extends React.Component {
                       placeholder="Type a message..."
                       rows="4"
                       type="textarea"
+                      value={message}
+                      required
                       onChange={this.onChange}
                     />
                   </FormGroup>
+                  {result && <div>
+                    <Alert color={result} >
+                      {feedback}
+                    </Alert>
+                  </div>}
                   <div>
                     <Button
                       block
-                      className="btn-round"
+                      className={`btn-round ${loading ? 'loading': ''}`}
+                      disabled={loading}
                       style={{backgroundColor: 'rgb(149, 224, 199)', border: 0}}
                       size="lg"
-                      type="button"
-                      onClick={this.submit}
+                      type="submit"
                     >
                       Send Message
                     </Button>
                   </div>
+                  </Form>
                   </div>
                 </Col>
               </Row>
