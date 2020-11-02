@@ -70,7 +70,7 @@ class Landing extends React.Component {
       this.setState({
         result: 'danger',
         loading: false,
-        feedback: err.response ? err.response.data : 'Some error occured, please refresh the page and try again.'
+        feedback: 'Some error occured, please refresh the page and try again.'
       });
     });
   }
@@ -93,7 +93,7 @@ class Landing extends React.Component {
       this.setState({
         result: 'danger',
         loading: false,
-        feedback: err.response ? err.response.data : 'Some error occured, please refresh the page and try again.'
+        feedback: 'Some error occured, please refresh the page and try again.'
       });
     });
   }
