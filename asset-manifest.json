@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.60375c39.chunk.css",
-    "main.js": "/static/js/main.af7bcdf1.chunk.js",
-    "main.js.map": "/static/js/main.af7bcdf1.chunk.js.map",
+    "main.css": "/static/css/main.ca464122.chunk.css",
+    "main.js": "/static/js/main.19fc6712.chunk.js",
+    "main.js.map": "/static/js/main.19fc6712.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.538f3bf5.js",
     "runtime-main.js.map": "/static/js/runtime-main.538f3bf5.js.map",
     "static/css/2.bb4705a5.chunk.css": "/static/css/2.bb4705a5.chunk.css",
-    "static/js/2.ec6c9a29.chunk.js": "/static/js/2.ec6c9a29.chunk.js",
-    "static/js/2.ec6c9a29.chunk.js.map": "/static/js/2.ec6c9a29.chunk.js.map",
+    "static/js/2.24d2ae31.chunk.js": "/static/js/2.24d2ae31.chunk.js",
+    "static/js/2.24d2ae31.chunk.js.map": "/static/js/2.24d2ae31.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6df9ae2461c1c4e9e769a911fabc2822.js": "/precache-manifest.6df9ae2461c1c4e9e769a911fabc2822.js",
+    "precache-manifest.9e6f0053007674068482e4611467ef14.js": "/precache-manifest.9e6f0053007674068482e4611467ef14.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.bb4705a5.chunk.css.map": "/static/css/2.bb4705a5.chunk.css.map",
-    "static/css/main.60375c39.chunk.css.map": "/static/css/main.60375c39.chunk.css.map",
-    "static/js/2.ec6c9a29.chunk.js.LICENSE.txt": "/static/js/2.ec6c9a29.chunk.js.LICENSE.txt",
+    "static/css/main.ca464122.chunk.css.map": "/static/css/main.ca464122.chunk.css.map",
+    "static/js/2.24d2ae31.chunk.js.LICENSE.txt": "/static/js/2.24d2ae31.chunk.js.LICENSE.txt",
     "static/media/Logo.png": "/static/media/Logo.7e86ef7a.png",
     "static/media/blog1.jpeg": "/static/media/blog1.aa3309a8.jpeg",
     "static/media/blog2.jpeg": "/static/media/blog2.8ac3b0b6.jpeg",
@@ -26,7 +26,6 @@
     "static/media/farm.jpg": "/static/media/farm.cd320ea2.jpg",
     "static/media/flask.svg": "/static/media/flask.bc938f2d.svg",
     "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.fee66e71.woff",
-    "static/media/img1.jpg": "/static/media/img1.40f05dbd.jpg",
     "static/media/medal.svg": "/static/media/medal.97512cce.svg",
     "static/media/nucleo.css": "/static/media/nucleo-icons.f82ec6ba.ttf",
     "static/media/planet-earth.svg": "/static/media/planet-earth.4f6e859b.svg",
@@ -39,8 +38,8 @@
   "entrypoints": [
     "static/js/runtime-main.538f3bf5.js",
     "static/css/2.bb4705a5.chunk.css",
-    "static/js/2.ec6c9a29.chunk.js",
-    "static/css/main.60375c39.chunk.css",
-    "static/js/main.af7bcdf1.chunk.js"
+    "static/js/2.24d2ae31.chunk.js",
+    "static/css/main.ca464122.chunk.css",
+    "static/js/main.19fc6712.chunk.js"
   ]
 }

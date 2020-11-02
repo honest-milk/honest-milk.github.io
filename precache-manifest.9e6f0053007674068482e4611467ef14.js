@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df5637c85996fd0f354db122ff3827b7",
+    "revision": "2ec4d4b6057f608a81b5d17c4ace66d2",
     "url": "/index.html"
   },
   {
-    "revision": "af63dd203c1cc0b88ff2",
+    "revision": "39d401b53442744f8ea4",
     "url": "/static/css/2.bb4705a5.chunk.css"
   },
   {
-    "revision": "02324a7b5e6587fe8934",
-    "url": "/static/css/main.60375c39.chunk.css"
+    "revision": "03580efb90b7ea7e768c",
+    "url": "/static/css/main.ca464122.chunk.css"
   },
   {
-    "revision": "af63dd203c1cc0b88ff2",
-    "url": "/static/js/2.ec6c9a29.chunk.js"
+    "revision": "39d401b53442744f8ea4",
+    "url": "/static/js/2.24d2ae31.chunk.js"
   },
   {
     "revision": "9aae5077729947dfa90ccff7014f56af",
-    "url": "/static/js/2.ec6c9a29.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.24d2ae31.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "02324a7b5e6587fe8934",
-    "url": "/static/js/main.af7bcdf1.chunk.js"
+    "revision": "03580efb90b7ea7e768c",
+    "url": "/static/js/main.19fc6712.chunk.js"
   },
   {
     "revision": "28a9b60e01bb27ab3b58",
@@ -96,8 +96,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "40f05dbde90b90447cefa1b6dbb08c24",
-    "url": "/static/media/img1.40f05dbd.jpg"
+    "revision": "7071a437551f04d12cbd862d9bd15dce",
+    "url": "/static/media/img1-small.7071a437.jpg"
+  },
+  {
+    "revision": "bf4f7795496f5a70e2c14f0a8f09ccc7",
+    "url": "/static/media/img1.bf4f7795.jpg"
   },
   {
     "revision": "97512cce2be46b8fa7db12fe44b21e85",
