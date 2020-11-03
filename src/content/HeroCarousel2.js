@@ -7,151 +7,80 @@ import {
   Row, Col, Button
 } from 'reactstrap';
 
+function ButtonRow() {
+  return (
+    
+  <div 
+    className="hero-action-buttons"
+  >
+    <Row>
+      <Col
+        className="hero-button-col"
+        id="hero-button-col-1"
+      >
+        <Button
+          className="btn-lg btn-icon ml-2"
+          color="primary"
+          href="#test-milk"
+        >
+          <span className="nav-link-inner--text ml-1">
+            Test Your Milk
+          </span>
+        </Button>
+      </Col>
+      <Col
+        className="hero-button-col"
+        id="hero-button-col-2"
+      >
+        <Button
+          className="btn-lg btn-icon ml-2"
+          color="primary"
+          href="#book-sample"
+        >
+          <span className="nav-link-inner--text ml-1">
+            Book Free Sample
+          </span>
+        </Button>
+      </Col>
+    </Row>
+  </div>
+  )
+}
+
 const items = [
   {
     id: 1,
-    altText: 'Farm Fresh Lab Tested',
     render: (
       <section 
         className="section pb-0 pb-6 hero-row" 
         id="banner-1"
-        style={{
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center center',
-          backgroundAttachment: 'fixed',
-          backgroundSize: 'cover',
-          position:'relative'
-        }}
       >
-        <div 
-          className="hero-action-buttons"
-        >
-          <Row>
-            <Col>
-            <Button
-              className="btn-lg btn-icon ml-2"
-              color="primary"
-              href="#test-milk"
-            >
-              <span className="nav-link-inner--text ml-1">
-                Test Your Milk
-              </span>
-            </Button>
-            </Col>
-            <Col>
-              <Button
-                className="btn-lg btn-icon ml-2"
-                color="primary"
-                href="#book-sample"
-              >
-                <span className="nav-link-inner--text ml-1">
-                  Book Free Sample
-                </span>
-              </Button>
-            </Col>
-          </Row>
-        </div>
+        <ButtonRow />
       </section>
     ),
-    caption: '',
-    src: 'https://github.com/chuanshuoge1/reactstrap/blob/gh-pages/image/1.png?raw=true'
   },
   {
     id: 2,
-    altText: '',
     render: (
       <section 
         className="section pb-0 pb-6 hero-row" 
-        id="banner-1"
-        style={{
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center center',
-          backgroundAttachment: 'fixed',
-          backgroundSize: 'cover',
-          position:'relative'
-        }}
+        id="banner-2"
       >
-        <div 
-          className="hero-action-buttons"
-        >
-          <Row>
-            <Col>
-            <Button
-              className="btn-lg btn-icon ml-2"
-              color="primary"
-              href="#test-milk"
-            >
-              <span className="nav-link-inner--text ml-1">
-                Test Your Milk
-              </span>
-            </Button>
-            </Col>
-            <Col>
-            <Button
-              className="btn-lg btn-icon ml-2"
-              color="primary"
-              href="#book-sample"
-            >
-              <span className="nav-link-inner--text ml-1">
-                Book Free Sample
-              </span>
-            </Button>
-            </Col>
-          </Row>
-        </div>
+        <ButtonRow />
       </section>
     ),
-    caption: '',
-    src: 'https://github.com/chuanshuoge1/reactstrap/blob/gh-pages/image/2.png?raw=true'
   },
   {
     id: 3,
-    altText: '',
-    caption: '',
     render: (
       
       <section 
         className="section pb-0 pb-6 hero-row" 
         id="banner-1"
-        style={{
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center center',
-          backgroundAttachment: 'fixed',
-          backgroundSize: 'cover',
-          position:'relative'
-        }}
       >
-        <div 
-          className="hero-action-buttons"
-        >
-          <Row>
-            <Col>
-            <Button
-              className="btn-lg btn-icon ml-2"
-              color="primary"
-              href="#test-milk"
-            >
-              <span className="nav-link-inner--text ml-1">
-                Test Your Milk
-              </span>
-            </Button>
-            </Col>
-            <Col>
-            <Button
-              className="btn-lg btn-icon ml-2"
-              color="primary"
-              href="#book-sample"
-            >
-              <span className="nav-link-inner--text ml-1">
-                Book Free Sample
-              </span>
-            </Button>
-            </Col>
-          </Row>
-        </div>
+        <ButtonRow />
       </section>
-    ),
-    src: 'https://github.com/chuanshuoge1/reactstrap/blob/gh-pages/image/3.png?raw=true'
+    )
   }
 ];
 
@@ -214,6 +143,8 @@ class MyCarousel extends Component {
           activeIndex={activeIndex}
           next={this.next}
           previous={this.previous}
+          translate="no"
+          // interval={120000}
         >
           <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
           {slides}

@@ -12,7 +12,7 @@ import {
 
 import flask from '../assets/img/icons/common/flask.svg';
 import medal from '../assets/img/icons/common/medal.svg';
-import shield from '../assets/img/icons/common/shield.svg';
+import shield from '../assets/img/icons/common/preservatives.png';
 import earth from '../assets/img/icons/common/planet-earth.svg';
 function Flask() {
   return (
@@ -59,21 +59,13 @@ class Features extends React.Component {
                       <CardBody className="py-4">
                         <div className="d-flex align-items-center">
                           <Medal />
-                          <h4 style={{margin: 0, marginLeft: '10px'}} className="text-primary">
+                          <h4 style={{margin: 0, marginLeft: '10px'}} className="text-primary text-bold">
                             Quality at its Best
                           </h4>
                         </div>
                         <p className="description">
                         Farm Fresh Raw Milk- Unlike other name brands where milk is highly processed and is generally 4-5 days old, Honest Milk is delivered at your doorstep within 5-6 hours of milking. It’s Pure, Raw and 100% natural milk without any processing or any cream separated.
                         </p>
-                        {/* <Button
-                          className="mt-4"
-                          color="primary"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Learn more
-                        </Button> */}
                       </CardBody>
                     </Card>
                   </Col>
@@ -83,9 +75,8 @@ class Features extends React.Component {
                         
                         <div className="d-flex align-items-center">
                           <Flask />
-                          <h4 style={{margin: 0, marginLeft: '10px'}} className="text-success">
-                            {/* Free of Antibiotics and growth hormones */}
-                            No compromise with the milking cycle
+                          <h4 style={{margin: 0, marginLeft: '10px'}} className="text-primary text-bold">
+                            Free of Antibiotics and Growth Hormones
                           </h4>
                         </div>
                         <p className="description">
@@ -101,7 +92,7 @@ class Features extends React.Component {
                       <CardBody className="py-4">
                         <div className="d-flex align-items-center">
                           <Shield />
-                          <h4 style={{margin: 0, marginLeft: '10px'}} className="text-warning">
+                          <h4 style={{margin: 0, marginLeft: '10px'}} className="text-primary text-bold">
                           No Preservatives
                           </h4>
                         </div>
@@ -116,7 +107,7 @@ class Features extends React.Component {
                       <CardBody className="py-4">
                         <div className="d-flex align-items-center">
                           <EnvFriendly />
-                          <h4 style={{margin: 0, marginLeft: '10px'}} className="text-default">
+                          <h4 style={{margin: 0, marginLeft: '10px'}} className="text-primary text-bold">
                             Environment Friendly
                           </h4>
                           </div>

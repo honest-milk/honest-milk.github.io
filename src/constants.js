@@ -1,5 +1,5 @@
 export default {
-  phone: '+918130320977',
+  phone: '+917707872590',
   email: 'support@honestmilk.in',
   message: 'Hi%2C I want to discuss about your product',
   products: [

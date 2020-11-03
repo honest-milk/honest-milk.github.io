@@ -26,7 +26,7 @@ class SimpleFooter extends React.Component {
                   Honest Milk
                 </h2>
                 <h6 className=" mb-0 font-weight-light">
-                  With ‘Honest Milk’, we aspire to serve these standard quality products to the larger section of household. In future, we look forward to serve you with a variety of dairy products at your table. 
+                  At ‘Honest Milk’, our mission is to reach the families that lack access to the farm fresh milk and provide them with wholesome milk nutrition.
                 </h6>
               </Col>
               <Col id="footer-details" className="btn-wrapper" lg="6">
@@ -34,7 +34,7 @@ class SimpleFooter extends React.Component {
                   <Button
                     className="btn-icon-only rounded-circle ml-1"
                     color="dribbble"
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/honest.milk/?hl=en"
                     id="tooltip829810202"
                     target="_blank"
                   >
@@ -46,23 +46,9 @@ class SimpleFooter extends React.Component {
                     Follow us
                   </UncontrolledTooltip>
                   <Button
-                    className="btn-icon-only rounded-circle"
-                    color="twitter"
-                    href="https://twitter.com/"
-                    id="tooltip475038074"
-                    target="_blank"
-                  >
-                    <span className="btn-inner--icon">
-                      <i className="fa fa-twitter" />
-                    </span>
-                  </Button>
-                  <UncontrolledTooltip delay={0} target="tooltip475038074">
-                    Follow us
-                  </UncontrolledTooltip>
-                  <Button
                     className="btn-icon-only rounded-circle ml-1"
                     color="facebook"
-                    href="https://www.facebook.com/"
+                    href="https://www.facebook.com/honest.milk.73/"
                     id="tooltip837440414"
                     target="_blank"
                   >
@@ -104,7 +90,7 @@ class SimpleFooter extends React.Component {
                           </div>
                         </td>
                         <td>
-                          <a href={`tel:${constants.phone}`}>+91 81303 20977</a>
+                          <a href={`tel:${constants.phone}`}>{constants.phone}</a>
                           
                         </td>
                       </tr>

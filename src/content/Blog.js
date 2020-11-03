@@ -1,12 +1,8 @@
 
 import React from "react";
+import {Link} from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
-
-import blog1 from "../assets/img/blogs/blog1.jpeg";
-import blog2 from "../assets/img/blogs/blog2.jpeg";
-import blog3 from "../assets/img/blogs/blog3.jpeg";
-import blog4 from "../assets/img/blogs/blog4.jpeg";
 
 import {
   Card,
@@ -18,34 +14,41 @@ import {
   CardText
 } from "reactstrap";
 
+import blog1 from "../assets/img/blogs/blog1.jpeg";
+import blog2 from "../assets/img/blogs/blog2.jpeg";
+import blog3 from "../assets/img/blogs/blog3.jpeg";
+import blog4 from "../assets/img/blogs/blog4.jpeg";
+
+import blogs from './blogs';
+const images = [
+  blog1,
+  blog2,
+  blog3,
+  blog4,
+]
+
 class Features extends React.Component {
   state = {};
   componentDidMount() {
-    // document.documentElement.scrollTop = 0;
-    // document.scrollingElement.scrollTop = 0;
-    // this.refs.main.scrollTop = 0;
   }
   render() {
+    let {showHeader = true} = this.props;
     return (
       <>
         <section className="section section-lg pt-0" id="blog">
           <Container>
-            <h1>
+            { showHeader && <h1>
               Blog
-            </h1>
+            </h1>}
             <Row className="justify-content-center mt-4">
               <Carousel
                 additionalTransfrom={0}
                 arrows
                 autoPlaySpeed={3000}
                 centerMode={false}
-                className=""
                 containerClass="container"
-                dotListClass=""
                 draggable
                 focusOnSelect={false}
-                infinite={true}
-                itemClass=""
                 keyBoardControl
                 minimumTouchDrag={80}
                 renderButtonGroupOutside={true}
@@ -80,50 +83,30 @@ class Features extends React.Component {
                 slidesToSlide={1}
                 swipeable
               >
-                <Card className="border-0 ms-2" style={{flexGrow: 1}}>
-                  <CardImg className="card-image" width="100%" src={blog1} alt="Card image cap" />
-                  <CardImgOverlay>
-                    <CardTitle>
-                      <h3 className="text-white">
-                        Most Common Adulterants in Milk
-                      </h3>
-                    </CardTitle>
-                    <CardText className="text-white d-none d-md-block">Urea, Formalin, Detergents, Ammonium Sulfate, Boric Acid, Caustic Soda, Benzoic Acid, Salicylic Acid, Hydrogen peroxide, Sugars, and Melamine.</CardText>
-                  </CardImgOverlay>
-                </Card>
-                <Card className="border-0 ms-2" style={{flexGrow: 1}}>
-                  <CardImg className="card-image" width="100%" src={blog2} alt="Card image cap" />
-                  <CardImgOverlay>
-                    <CardTitle>
-                      <h3 className="text-white">
-                        Most Common Adulterants in Milk
-                      </h3>
-                    </CardTitle>
-                    <CardText className="text-white d-none d-md-block">Urea, Formalin, Detergents, Ammonium Sulfate, Boric Acid, Caustic Soda, Benzoic Acid, Salicylic Acid, Hydrogen peroxide, Sugars, and Melamine.</CardText>
-                  </CardImgOverlay>
-                </Card>
-                <Card className="border-0 ms-2" style={{flexGrow: 1}}>
-                  <CardImg className="card-image" width="100%" src={blog3} alt="Card image cap" />
-                  <CardImgOverlay>
-                    <CardTitle>
-                      <h3 className="text-white">
-                        Most Common Adulterants in Milk
-                      </h3>
-                    </CardTitle>
-                    <CardText className="text-white d-none d-md-block">Urea, Formalin, Detergents, Ammonium Sulfate, Boric Acid, Caustic Soda, Benzoic Acid, Salicylic Acid, Hydrogen peroxide, Sugars, and Melamine.</CardText>
-                  </CardImgOverlay>
-                </Card>
-                <Card className="border-0 ms-2" style={{flexGrow: 1}}>
-                  <CardImg className="card-image" width="100%" src={blog4} alt="Card image cap" />
-                  <CardImgOverlay>
-                    <CardTitle>
-                      <h3 className="text-white">
-                        Most Common Adulterants in Milk
-                      </h3>
-                    </CardTitle>
-                    <CardText className="text-white d-none d-md-block">Urea, Formalin, Detergents, Ammonium Sulfate, Boric Acid, Caustic Soda, Benzoic Acid, Salicylic Acid, Hydrogen peroxide, Sugars, and Melamine.</CardText>
-                  </CardImgOverlay>
-                </Card>
+                {
+                  blogs.map((blog, i) => (
+                    <Link key={i.toString()} to={`/${i+1}/blog-post`}>
+                    <Card className="border-0 ms-2" style={{flexGrow: 1}} >
+                      <CardImg 
+                        className="card-image" 
+                        width="100%" 
+                        src={images[i]} 
+                        alt="Card image cap" 
+                      />
+                      <CardImgOverlay>
+                        <CardTitle>
+                          <h3 className="text-white">
+                            {blog.title}
+                          </h3>
+                        </CardTitle>
+                        <CardText className="text-white d-none d-md-block">
+                          {blog.subtitle}
+                        </CardText>
+                      </CardImgOverlay>
+                    </Card>
+                    </Link>
+                  ))
+                }
               </Carousel>
             </Row>
           </Container>

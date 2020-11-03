@@ -9,6 +9,7 @@ import "./assets/css/style.css";
 
 import Index from "./content/Index";
 import FAQ from "./content/FAQ";
+import BlogPost from "./content/BlogPost";
 import BookFreeSample from "./content/BookFreeSample";
 import NavBar from "./content/Header";
 import Footer from "./content/Footer";
@@ -21,6 +22,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/book-sample" exact render={props => <BookFreeSample {...props}/>} />
       <Route path="/faq" exact render={props => <FAQ {...props}/>} />
+      <Route path="/:id/blog-post" exact render={props => <BlogPost {...props}/>} />
       <Route path="/" render={props => <Index {...props} />} />
       <Redirect to="/" />
     </Switch>

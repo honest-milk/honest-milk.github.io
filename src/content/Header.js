@@ -153,7 +153,7 @@ class DemoNavbar extends React.Component {
                       id="tooltip333589074"
                     >
                       <span className="nav-link-inner--text ml-2">
-                        Why Honest Milk?
+                        Why Honest Milk
                       </span>
                     </NavLink>
                   </NavItem>

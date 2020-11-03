@@ -254,9 +254,9 @@ class Landing extends React.Component {
                         inputProps={{
                           placeholder: "Pick a date"
                         }}
-                        value={date}
+                        defaultValue={date}
                         isValidDate={this.disablePastDt}
-                        dateFormat="YYYY-MM-DD"
+                        dateFormat={'DD-MM-YYYY'}
                         timeFormat={false}
                         required
                         name="date"
@@ -323,7 +323,7 @@ class Landing extends React.Component {
                       size="lg"
                       type="submit"
                     >
-                      Book Visit
+                      Book your Sample
                     </Button>
                   </div>
                   
@@ -332,7 +332,7 @@ class Landing extends React.Component {
                   {
                     stage === 3 &&
                     <div>
-                      <h3>We have received your request.</h3>
+                      <h3>We have received your request. Our team will contact you shortly.</h3>
                     </div>
                   }
                   </div>

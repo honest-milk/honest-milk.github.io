@@ -53,7 +53,7 @@ class Landing extends React.Component {
     .then(res => {
       this.setState({
         result: 'success',
-        feedback: 'We have booked a slot for you. See you there!',
+        feedback: 'Thank you. Your request has been submitted. Our team will get in touch with your shortly.',
         loading: false
       });
     })
@@ -101,12 +101,11 @@ class Landing extends React.Component {
                     <div className="pl-4">
                       <h4 className="display-3 text-white text-bold text-shadow">Book A Farm Visit</h4>
                       <p className="text-white text-bold text-shadow">
-                        Visit our farm where you can get a closer look at our testing laboratory. <br />
                         See how we deliver quality we promise.
-                        We are located at <br/>
-                          Organic Dairy Farm <br/>
-                          Village Dhanouni,  <br/>
-                          Tehsil Dera Bassi, <br/>
+                        We are located at: <br/>
+                          Organic Dairy Farm, 
+                          Village Dhanouni  <br/>
+                          Tehsil Dera Bassi, 
                           District Mohali <br/>
                       </p>
                     </div>
@@ -171,7 +170,7 @@ class Landing extends React.Component {
                           placeholder: "Pick a date"
                         }}
                         defaultValue={moment().add(1, 'day')}
-                        format={'YYYY-MM-DD'}
+                        dateFormat={'DD-MM-YYYY'}
                         isValidDate={this.disablePastDt}
                         timeFormat={false}
                         required
@@ -194,7 +193,7 @@ class Landing extends React.Component {
                       size="lg"
                       type="submit"
                     >
-                      Book Visit
+                      Book A Visit
                     </Button>
                   </div>
                   
