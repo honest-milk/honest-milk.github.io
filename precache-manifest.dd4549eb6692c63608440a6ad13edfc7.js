@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e63124bdca78883650afdf0e26173294",
+    "revision": "ba7bae695c9f647fc5347f0dcb33bd82",
     "url": "/index.html"
   },
   {
-    "revision": "de8be02ddfdab5cb0a27",
+    "revision": "29d2b0a44ecb22ee00aa",
     "url": "/static/css/2.bb4705a5.chunk.css"
   },
   {
-    "revision": "05ec92beb943b24210ca",
-    "url": "/static/css/main.ca464122.chunk.css"
+    "revision": "f26c89f49de98d7192d7",
+    "url": "/static/css/main.d3a9b7f5.chunk.css"
   },
   {
-    "revision": "de8be02ddfdab5cb0a27",
-    "url": "/static/js/2.d5a42353.chunk.js"
+    "revision": "29d2b0a44ecb22ee00aa",
+    "url": "/static/js/2.50a1a3f3.chunk.js"
   },
   {
     "revision": "9aae5077729947dfa90ccff7014f56af",
-    "url": "/static/js/2.d5a42353.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.50a1a3f3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "05ec92beb943b24210ca",
-    "url": "/static/js/main.80ecff5a.chunk.js"
+    "revision": "f26c89f49de98d7192d7",
+    "url": "/static/js/main.68da90b0.chunk.js"
   },
   {
     "revision": "28a9b60e01bb27ab3b58",
@@ -46,10 +46,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c484cd5b14ed89a335911ffa9c9d612d",
     "url": "/static/media/blog4.c484cd5b.jpeg"
-  },
-  {
-    "revision": "d767d637ecd17bc8490a95fa11dbed25",
-    "url": "/static/media/box.d767d637.svg"
   },
   {
     "revision": "3e4238e2520a23b2d430576f9627de27",
@@ -96,6 +92,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
+    "revision": "0555ec3ecdf656bd639aac050fc00bd9",
+    "url": "/static/media/gmail-512.0555ec3e.webp"
+  },
+  {
     "revision": "7071a437551f04d12cbd862d9bd15dce",
     "url": "/static/media/img1-small.7071a437.jpg"
   },
@@ -104,8 +104,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/img1.bf4f7795.jpg"
   },
   {
+    "revision": "02c5a2f0c3d748fd80c6cf860b1f8ac1",
+    "url": "/static/media/img2-small.02c5a2f0.jpg"
+  },
+  {
+    "revision": "c830a0180753eb4e3751ca04e0a16799",
+    "url": "/static/media/img2.c830a018.jpg"
+  },
+  {
     "revision": "97512cce2be46b8fa7db12fe44b21e85",
     "url": "/static/media/medal.97512cce.svg"
+  },
+  {
+    "revision": "d9c996692f6701442ee12f672ab5b232",
+    "url": "/static/media/milk.d9c99669.svg"
   },
   {
     "revision": "0b8a30b10cbe7708d5f3a4b007c1d665",
@@ -136,6 +148,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/planet-earth.4f6e859b.svg"
   },
   {
+    "revision": "c3829b75c6367a4d67f7a4c46b7d9916",
+    "url": "/static/media/preservatives.c3829b75.png"
+  },
+  {
     "revision": "04eb8fc57f27498e5ae37523e3bfb2c7",
     "url": "/static/media/revicons.04eb8fc5.woff"
   },
@@ -146,10 +162,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2feb69ccb596730c72920c6ba3e37ef8",
     "url": "/static/media/revicons.2feb69cc.eot"
-  },
-  {
-    "revision": "315b768edf9112db20b7dfa21b09f8bf",
-    "url": "/static/media/shield.315b768e.svg"
   },
   {
     "revision": "969b7406df8539065b7ccf3e1e222658",
