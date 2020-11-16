@@ -20,7 +20,7 @@ class Index extends React.Component {
           <AboutUs />
           <Features />
           <Blog />
-          <PurityMeter />
+          {/* <PurityMeter /> */}
           <BookVisit />
           <HowItWorks />
           <ContactUs />

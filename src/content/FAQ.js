@@ -80,8 +80,14 @@ let list = [
     que: 'Why do you package the milk in glass bottles? ',
     ans: (
       <p>
-        Glass is one of the safest materials on earth, for  packaging of F&B products. It is non-toxic and non reactive, as compared to other packaging materials  such as plastic, which can leach into food products. Our  brand values don’t go with plastic or anti-environment  materials, thus we use glass bottles for packaging. It is  very tough for us to work with daily supplies in glass  bottles, but creating high quality produce and then  packaging it in plastic does not make any sense to us! • Is the milk pasteurised?  <br />
-        Honest milk is raw, unpasteurized milk. We don’t process the milk – thus providing              purest and freshest  form of milk to our patrons.
+        Glass is one of the safest materials on earth, for  packaging of F&B products. It is non-toxic and non reactive, as compared to other packaging materials  such as plastic, which can leach into food products. Our  brand values don’t go with plastic or anti-environment  materials, thus we use glass bottles for packaging. It is  very tough for us to work with daily supplies in glass  bottles, but creating high quality produce and then  packaging it in plastic does not make any sense to us!
+      </p>
+    )
+  }, {
+    que: 'Is the milk pasteurised?',
+    ans: (
+      <p>
+        Honest milk is raw, unpasteurized milk. We don’t process the milk – thus providing purest and freshest form of milk to our patrons.
       </p>
     )
   }, {

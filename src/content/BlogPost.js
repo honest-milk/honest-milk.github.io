@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { Container, Row, Col } from "reactstrap";
+import { Container } from "reactstrap";
 
 import blog1 from "../assets/img/blogs/blog1.jpeg";
 import blog2 from "../assets/img/blogs/blog2.jpeg";

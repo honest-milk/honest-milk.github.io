@@ -200,6 +200,8 @@ class Landing extends React.Component {
                         placeholder="Phone Number"
                         type="number"
                         name="phone"
+                        min={6000000000}
+                        max={9999999999}
                         required
                         onFocus={e => this.setState({ emailFocused: true })}
                         onBlur={e => this.setState({ emailFocused: false })}
