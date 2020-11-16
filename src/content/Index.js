@@ -8,7 +8,7 @@ import Features from "./Features";
 import ContactUs from "./ContactUs2";
 import BookVisit from './BookVisit';
 import HowItWorks from './HowItWorks';
-import PurityMeter from './PurityMeter';
+// import PurityMeter from './PurityMeter';
 import Blog from './Blog';
 
 class Index extends React.Component {
