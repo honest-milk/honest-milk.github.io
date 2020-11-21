@@ -1,6 +1,6 @@
 import axios from "axios";
-// const URL = 'http://localhost:5000/api/misc';
-const URL = 'https://honestmilk-api.herokuapp.com/api/misc';
+const URL = 'http://localhost:5000/api/misc';
+// const URL = 'https://honestmilk-api.herokuapp.com/api/misc';
 
 
 async function api(config) {
@@ -45,6 +45,16 @@ export async function bookVisit(visit) {
     url: `${URL}/bookVisit`,
     method: 'POST',
     data: {visit},
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  });
+}
+
+export async function getProduct(id) {
+  return api({
+    url: `${URL}/${id}/getProductDetails`,
+    method: 'get',
     headers: {
       'Content-Type': 'application/json'
     },
