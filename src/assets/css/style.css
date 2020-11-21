@@ -138,6 +138,9 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .table-condensed td, .table-condensed th{
+    padding: 8px;
+  }
 }
 @media (min-width: 992px) {
   

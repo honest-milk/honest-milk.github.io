@@ -197,7 +197,7 @@ class Purity extends Component {
                   </TabPane>
                   <TabPane tabId="2">
                     <Row>
-                      <Col>
+                      <Col style={{overflow: 'auto'}}>
                         <PurityTable 
                           product={product}
                         />

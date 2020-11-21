@@ -16,7 +16,9 @@ function PurityTable({product}) {
   }
   return <div id="purity-table">
     <Table 
-      striped 
+      // striped 
+      // conde
+      className="table-condensed"
       style={{backgroundColor: 'white'}}
     >
       <thead>
@@ -142,8 +144,9 @@ function PurityTable({product}) {
     </Table>
 
     <Table 
-      striped 
+      // striped 
       style={{backgroundColor: 'white', marginTop: 20}}
+      className="table-condensed"
     >
       <thead>
         <tr >
