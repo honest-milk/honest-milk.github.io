@@ -1,6 +1,6 @@
 import axios from "axios";
-// const URL = 'http://localhost:5000/api/misc';
-const URL = 'https://honestmilk-api.herokuapp.com/api/misc';
+const URL = 'http://localhost:5000/api/misc';
+// const URL = 'https://honestmilk-api.herokuapp.com/api/misc';
 
 
 async function api(config) {
