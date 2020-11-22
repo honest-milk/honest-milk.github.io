@@ -49,12 +49,15 @@ class Landing extends React.Component {
     this.setState({
       loading: true
     });
-    let {name, phone, flat, region} = this.state;
+    let {name, phone, flat, street, region, } = this.state;
     let sample = {
       name, phone, 
       address: {
+        name: 'Home',
         flat,
-        region
+        street,
+        region,
+        isPrimary: true
       }
     }
     bookSampleInit(sample)
@@ -235,7 +238,25 @@ class Landing extends React.Component {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Region"
+                        placeholder="Street/Apartment"
+                        type="text"
+                        name="street"
+                        required
+                        onChange={this.onChange}
+                        onFocus={e => this.setState({ nameFocused: true })}
+                        onBlur={e => this.setState({ nameFocused: false })}
+                      />
+                    </InputGroup>
+                  </FormGroup>
+                  <FormGroup>
+                    <InputGroup className="input-group-alternative">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="fa fa-home" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="Region/Sector"
                         type="text"
                         name="region"
                         required
