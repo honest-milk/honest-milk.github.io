@@ -12,13 +12,15 @@ import {
   NavLink
 } from "reactstrap";
 import PurityTable from './PurityTable';
+import PurityTable2 from './PurityTable2';
+import ContentsTest from './ContentsTest';
 import classnames from 'classnames';
 
 import {getProduct} from '../apis';
 
 class Purity extends Component {
   state = {
-    activeTab: '2',
+    activeTab: '1',
     loading: false,
     product: {
       "id": 1,
@@ -145,7 +147,7 @@ class Purity extends Component {
                       onClick={() => { this.toggle('1'); }}
                       style={{color: 'var(--primary)', fontSize: 24, cursor: 'pointer'}}
                     >
-                      Contents
+                      Test for Milk Quality
                     </NavLink>
                   </NavItem>
                   <NavItem>
@@ -154,43 +156,20 @@ class Purity extends Component {
                       onClick={() => { this.toggle('2'); }}
                       style={{color: 'var(--primary)', fontSize: 24, cursor: 'pointer'}}
                     >
-                      Adulterants
+                      Test for Adulteration
                     </NavLink>
                   </NavItem>
                 </Nav>
                 <TabContent activeTab={activeTab}>
                   <TabPane tabId="1">
-                    <Row sm="4" md="4" lg="4" xl="4" style={{marginTop: 30}}>
+                    <ContentsTest 
+                      product={product}
+                    />
+                    <Row>
                       <Col>
-                        <div className="stat-card card-body">
-                          <div>FAT</div>
-                          <div><span style={{fontSize: '2em'}}>{quality ? quality.fat.value : 3.8}</span> %</div>
-                          <div>STANDARD 3.5 %</div>
-                        </div>                  
-                      </Col>
-                      
-                      <Col>
-                        <div className="stat-card card-body">
-                          <div>SNF <br /></div>
-                          <div><span style={{fontSize: '2em'}}>{quality ? quality.snf.value : 8.35}</span> % <br /></div>
-                          <div>STANDARD 8.5 %</div>
-                        </div>
-                      </Col>
-
-                      <Col>
-                        <div className="stat-card card-body">
-                          <div>PROTEIN <br /></div>
-                          <div><span style={{fontSize: '2em'}}>{quality ? quality.protein.value : 3.8}</span> % <br /></div>
-                          <div>STANDARD 3 %</div>
-                        </div>
-                      </Col>
-                      
-                      <Col>
-                        <div className="stat-card card-body">
-                            <div>MBRT <br /></div>
-                            <div><span style={{fontSize: '2em'}}>{quality ? quality.mbrt.value : 4}</span> HOURS <br /></div>
-                            <div>STANDARD 3 Hours</div>
-                        </div>
+                      <PurityTable2
+                        product={product}
+                      />
                       </Col>
                     </Row>
               

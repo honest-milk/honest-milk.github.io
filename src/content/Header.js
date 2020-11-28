@@ -109,9 +109,7 @@ class DemoNavbar extends React.Component {
                     </Col>
                   </Row>
                 </div>
-                <Nav className="navbar-nav-hover align-items-lg-center ml-lg-auto" navbar>
-
-                </Nav>
+                
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem>
                     <NavLink
@@ -153,11 +151,11 @@ class DemoNavbar extends React.Component {
                       id="tooltip333589074"
                     >
                       <span className="nav-link-inner--text ml-2">
-                        Why Honest Milk
+                        Why Us
                       </span>
                     </NavLink>
                   </NavItem>
-                  <NavItem>
+                  {/* <NavItem>
                     <NavLink
                       className="nav-link-icon"
                       href="#blog"
@@ -167,7 +165,7 @@ class DemoNavbar extends React.Component {
                         Blog
                       </span>
                     </NavLink>
-                  </NavItem>
+                  </NavItem> */}
                   <NavItem className="d-lg-none">
                     <NavLink
                       className="nav-link-icon"

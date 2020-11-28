@@ -38,7 +38,7 @@ function ButtonRow() {
           href="#book-sample"
         >
           <span className="nav-link-inner--text ml-1">
-            Book Free Sample
+            Book Your Trial Pack
           </span>
         </Button>
       </Col>
@@ -138,7 +138,9 @@ class MyCarousel extends Component {
     });
 
     return (
-      <div>
+      <div
+        style={{marginTop: 80}}
+      >
         <Carousel
           activeIndex={activeIndex}
           next={this.next}
