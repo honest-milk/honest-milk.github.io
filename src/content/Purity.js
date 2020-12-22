@@ -38,19 +38,19 @@ class Purity extends Component {
           "quality": {
               "fat": {
                   "title": "FAT",
-                  "value": 3.8
+                  "value": '4.9 %'
               },
               "snf": {
                   "title": "SNF (Solid Non-Fats)",
-                  "value": 8.35
+                  "value": '8.1 %'
               },
               "protein": {
                   "title": "Protein",
-                  "value": 3.8
+                  "value": '3 %'
               },
               "mbrt": {
                   "title": "MBRT Tests",
-                  "value": 4
+                  "value": '5 Hours'
               }
           },
           "adulteration": {
@@ -68,7 +68,7 @@ class Purity extends Component {
               },
               "detergent": {
                   "natural": "light-yellow",
-                  "adulterated": "yellow"
+                  "adulterated": ""
               },
               "peroxide": {
                   "natural": "no-change",
@@ -165,13 +165,6 @@ class Purity extends Component {
                     <ContentsTest 
                       product={product}
                     />
-                    <Row>
-                      <Col>
-                      <PurityTable2
-                        product={product}
-                      />
-                      </Col>
-                    </Row>
               
                   </TabPane>
                   <TabPane tabId="2">

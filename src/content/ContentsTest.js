@@ -26,7 +26,7 @@ function Contents({product})  {
           <Col xs="12" sm="12" md="6" lg="3" style={{padding: 10}}>
             <div className="stat-card card-body" onClick={() => set_fat(!fat_collapsed)}>
               <div>FAT</div>
-              <div><span style={{fontSize: '2em'}}>{quality ? quality.fat.value : 3.8}</span> %</div>
+              <div><span style={{fontSize: '2em'}}>{quality ? quality.fat.value : '3.8 %'}</span></div>
               <div>STANDARD 3.5 - 4.5 %</div>
               <Collapse
                 isOpen={fat_collapsed}
@@ -41,7 +41,7 @@ function Contents({product})  {
           <Col xs="12" sm="12" md="6" lg="3" style={{padding: 10}}>
             <div className="stat-card card-body" onClick={() => set_snf(!snf_collapsed)}>
               <div>SNF <br /></div>
-              <div><span style={{fontSize: '2em'}}>{quality ? quality.snf.value : 8.35}</span> % <br /></div>
+              <div><span style={{fontSize: '2em'}}>{quality ? quality.snf.value : '8.35 %'}</span><br /></div>
               <div>STANDARD 8 - 8.5 %</div>
               <Collapse
                 isOpen={snf_collapsed}
@@ -56,7 +56,7 @@ function Contents({product})  {
           <Col xs="12" sm="12" md="6" lg="3" style={{padding: 10}}>
             <div className="stat-card card-body" onClick={() => set_protein(!protein_collapsed)}>
               <div>PROTEIN <br /></div>
-              <div><span style={{fontSize: '2em'}}>{quality ? quality.protein.value : 3.8}</span> % <br /></div>
+              <div><span style={{fontSize: '2em'}}>{quality ? quality.protein.value : '3.8 %'}</span><br /></div>
               <div>STANDARD 32 gms / Litre</div>
               <Collapse
                 isOpen={protein_collapsed}
@@ -71,7 +71,7 @@ function Contents({product})  {
           <Col xs="12" sm="12" md="6" lg="3" style={{padding: 10}}>
             <div className="stat-card card-body" onClick={() => set_mbrt(!mbrt_collapsed)}>
                 <div>MBRT <br /></div>
-                <div><span style={{fontSize: '2em'}}>{quality ? quality.mbrt.value : 4}</span> HOURS <br /></div>
+                <div><span style={{fontSize: '2em'}}>{quality ? quality.mbrt.value : '4 Hours'}</span><br /></div>
                 <div>STANDARD 3 Hours</div>
                 <Collapse
                   isOpen={mbrt_collapsed}
