@@ -22,8 +22,8 @@ import blog4 from "../assets/img/blogs/blog4.jpeg";
 import blogs from './blogs';
 const images = [
   blog1,
-  blog2,
   blog3,
+  blog2,
   blog4,
 ]
 

@@ -12,7 +12,6 @@ import {
   NavLink
 } from "reactstrap";
 import PurityTable from './PurityTable';
-import PurityTable2 from './PurityTable2';
 import ContentsTest from './ContentsTest';
 import classnames from 'classnames';
 
@@ -38,15 +37,15 @@ class Purity extends Component {
           "quality": {
               "fat": {
                   "title": "FAT",
-                  "value": '4.9 %'
+                  "value": '4.2 %'
               },
               "snf": {
                   "title": "SNF (Solid Non-Fats)",
-                  "value": '8.1 %'
+                  "value": '9.1 %'
               },
               "protein": {
                   "title": "Protein",
-                  "value": '3 %'
+                  "value": '3.3 %'
               },
               "mbrt": {
                   "title": "MBRT Tests",

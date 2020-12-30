@@ -11,8 +11,8 @@ import blogs from './blogs';
 import BlogList from './Blog';
 const images = [
   blog1,
-  blog2,
   blog3,
+  blog2,
   blog4,
 ]
 

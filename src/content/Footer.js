@@ -101,7 +101,7 @@ class SimpleFooter extends React.Component {
                           </div>
                         </td>
                         <td>
-                        <a href={`mailto:${constants.email}`}>support@honestmilk.in</a>
+                        <a href={`mailto:${constants.email}`}>{constants.email}</a>
                         </td>
                       </tr>
                     </tbody>
@@ -111,7 +111,7 @@ class SimpleFooter extends React.Component {
             </Row>
             <hr />
             <Row className=" align-items-center justify-content-md-between">
-              <Col md="6">
+              <Col md="2">
                 <div className=" copyright">
                   © {new Date().getFullYear()}{" "}
                   <a
@@ -122,7 +122,7 @@ class SimpleFooter extends React.Component {
                   .
                 </div>
               </Col>
-              <Col md="6">
+              <Col md="10">
                 <Nav className=" nav-footer justify-content-end">
                   
                   <NavItem>
@@ -137,6 +137,27 @@ class SimpleFooter extends React.Component {
                       href="#faq"
                     >
                       FAQ
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      href="#terms"
+                    >
+                      Terms of Service
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      href="#privacy"
+                    >
+                      Privacy Policy
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      href="#refund"
+                    >
+                      Return/Refund Policy
                     </NavLink>
                   </NavItem>
                   <NavItem>

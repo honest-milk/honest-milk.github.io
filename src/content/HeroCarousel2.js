@@ -21,7 +21,7 @@ function ButtonRow() {
         <Button
           className="btn-lg btn-icon ml-2"
           color="primary"
-          href="#test-milk"
+          href="#2/blog-post"
         >
           <span className="nav-link-inner--text ml-1">
             Test Your Milk

@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../assets/img/brand/Logo.png";
+import Product from "../assets/img/brand/Product.png";
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
 
